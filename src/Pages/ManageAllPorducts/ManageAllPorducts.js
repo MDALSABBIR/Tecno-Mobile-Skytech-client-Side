@@ -7,7 +7,7 @@ const ManageAllPorducts = () => {
   const [orders, setOrders] = useState([]);
   const handleUpdate = (id) => {
     const updateStatus = { status: "Shipped" };
-    const url = `http://localhost:5000/orders/${id}`;
+    const url = `https://whispering-river-87986.herokuapp.com/orders/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -20,7 +20,7 @@ const ManageAllPorducts = () => {
         console.log(data);
         if (data.modifiedCount) {
           alert("Update Succeflly");
-          fetch(`http://localhost:5000/orders`)
+          fetch(`https://whispering-river-87986.herokuapp.com/orders`)
             .then((res) => res.json())
             .then((data) => {
               setOrders(data);
@@ -34,7 +34,7 @@ const ManageAllPorducts = () => {
 
   const handleDeelete = (id) => {
     if (window.confirm("Are you sure you want To delete")) {
-      const url = `http://localhost:5000/orders/${id}`;
+      const url = `https://whispering-river-87986.herokuapp.com/orders/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -53,7 +53,7 @@ const ManageAllPorducts = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/orders`)
+    fetch(`https://whispering-river-87986.herokuapp.com/orders`)
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);

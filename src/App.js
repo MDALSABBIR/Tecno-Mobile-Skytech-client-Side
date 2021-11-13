@@ -19,6 +19,7 @@ import AdminRoute from "./Global/Login/AdminRoute/AdminRoute";
 import AddProduct from "./Pages/AddProduct/AddProduct.js";
 import ManageAllPorducts from "./Pages/ManageAllPorducts/ManageAllPorducts";
 import ManageProducts from "./Pages/ManageProducts/ManageProducts";
+import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -41,6 +42,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute exact path="/myOrder">
               <MyOrder></MyOrder>
+            </PrivateRoute>
+            <PrivateRoute exact path="/dashboard">
+              <Dashboard></Dashboard>
             </PrivateRoute>
             <PrivateRoute exact path="/pay">
               <Pay></Pay>

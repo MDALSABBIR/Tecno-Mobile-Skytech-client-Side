@@ -10,7 +10,7 @@ const ManageProducts = () => {
 
   const handleDeelete = (id) => {
     if (window.confirm("Are you sure you want To delete")) {
-      const url = `http://localhost:5000/products/${id}`;
+      const url = `https://whispering-river-87986.herokuapp.com/products/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -29,7 +29,7 @@ const ManageProducts = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products`)
+    fetch(`https://whispering-river-87986.herokuapp.com/products`)
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);

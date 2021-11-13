@@ -14,7 +14,7 @@ const Purchase = () => {
   const { purchase } = useParams();
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://whispering-river-87986.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
@@ -30,7 +30,7 @@ const Purchase = () => {
     console.log(data.email);
     console.log(data.productName);
     axios
-      .post("http://localhost:5000/orders", data)
+      .post("https://whispering-river-87986.herokuapp.com/orders", data)
       .then((res) => {
         if (res.data.insertedId) {
           alert("Registration Succefull");

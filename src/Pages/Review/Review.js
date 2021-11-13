@@ -13,7 +13,7 @@ const Review = () => {
     data.email = user?.email;
     console.log(data.email);
     axios
-      .post("http://localhost:5000/reviews", data)
+      .post("https://whispering-river-87986.herokuapp.com/reviews", data)
       .then((res) => {
         if (res.data.insertedId) {
           alert("Review Added Succefully");

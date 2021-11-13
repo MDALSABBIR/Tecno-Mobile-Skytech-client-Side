@@ -1,8 +1,9 @@
 import React from "react";
 import { Container, Nav, Navbar, Button, Dropdown } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
 import useAuth from "./../../contexts/useAuth";
+import { Box } from "@mui/system";
 
 const Header = () => {
   const { user, admin, logOut } = useAuth();
@@ -19,6 +20,7 @@ const Header = () => {
               alt=""
             />
           </Navbar.Brand>
+          <h2 className="title">Tecno Skytech</h2>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto d-flex align-items-center">
@@ -32,7 +34,6 @@ const Header = () => {
                     <Dropdown.Toggle id="dropdown-basic">
                       Dashboard
                     </Dropdown.Toggle>
-
                     {admin ? (
                       <Dropdown.Menu>
                         <Dropdown.Item as={Link} to="/manageAllPorducts">
