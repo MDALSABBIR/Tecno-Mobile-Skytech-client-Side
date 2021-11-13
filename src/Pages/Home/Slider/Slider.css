@@ -1,0 +1,28 @@
+.slider-img {
+  height: 96vh;
+  min-width: 100vw;
+}
+.btn-global {
+  width: 125px;
+  height: 40px;
+  background-color: #fffb08;
+  color: white;
+}
+.slider-text{
+  color: gold;
+}
+.slider-text-btn {
+  color: black;
+  font-weight: 600;
+  padding: 10px;
+  background-color: yellow;
+  display: inline-block;
+  margin-left: -525px;
+  margin-top: 10px;
+}
+.slider-text-btn:hover{
+  border-radius: 10px;
+  transition: 0.5s;
+  background-color: black;
+  color: wheat;
+}

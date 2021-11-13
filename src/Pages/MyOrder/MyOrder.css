@@ -1,0 +1,16 @@
+.btn-global-color {
+  font-weight: 500;
+  background-color: darkcyan;
+  color: white;
+  /* height: 38px; */
+  padding: 8px;
+  border-radius: 5px;
+  width: auto;
+}
+.btn-global-color:hover {
+  background-color: gold;
+  font-weight: 500;
+  color: black;
+  border-radius: 10px;
+  transition: 0.5s;
+}
