@@ -37,14 +37,14 @@ function App() {
             <Route path="/explore">
               <Explore></Explore>
             </Route>
+            <Route path="/dashBoard">
+              <Dashboard></Dashboard>
+            </Route>
             <PrivateRoute exact path="/purchase/:purchase">
               <Purchase></Purchase>
             </PrivateRoute>
             <PrivateRoute exact path="/myOrder">
               <MyOrder></MyOrder>
-            </PrivateRoute>
-            <PrivateRoute exact path="/dashboard">
-              <Dashboard></Dashboard>
             </PrivateRoute>
             <PrivateRoute exact path="/pay">
               <Pay></Pay>

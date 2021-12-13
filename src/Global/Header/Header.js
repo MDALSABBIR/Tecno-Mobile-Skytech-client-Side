@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Nav, Navbar, Button, Dropdown } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Header.css";
 import useAuth from "./../../contexts/useAuth";
-import { Box } from "@mui/system";
+
 
 const Header = () => {
   const { user, admin, logOut } = useAuth();
@@ -47,6 +47,9 @@ const Header = () => {
                         </Dropdown.Item>
                         <Dropdown.Item as={Link} to="/manageProducts">
                           Manage Products
+                        </Dropdown.Item>
+                        <Dropdown.Item as={Link} to="/pay">
+                          Pay
                         </Dropdown.Item>
                       </Dropdown.Menu>
                     ) : (
